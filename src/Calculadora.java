@@ -21,7 +21,7 @@ public class Calculadora {
                 RestaBinariaComplementos();
             }
         } else {
-            while (!((operacion.equals("0")) && operacion.equals("1"))) {
+            while ((!(operacion.equals("0")) && (!(operacion.equals("1"))))) {
                 JOptionPane.showMessageDialog(null, "valores no binarios" +ENTER
                         + "intenta de nuevo");
                 Operacion();
@@ -109,7 +109,7 @@ public class Calculadora {
         if(estado) {
             JOptionPane.showMessageDialog(null, "Calculadora encendida");
             Opciones();
-        } else if(!estado) {
+        } else {
             System.out.println(" ");
         }
     }
