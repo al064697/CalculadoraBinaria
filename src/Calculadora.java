@@ -57,8 +57,7 @@ public class Calculadora {
         switch(opcion) {
             case 1:
                 JOptionPane.showMessageDialog(null, "Apagando calculadora...");
-                System.exit(0);
-                break;
+                System.exit(0); break;
             case 0:
                 Opciones();
                 break;
