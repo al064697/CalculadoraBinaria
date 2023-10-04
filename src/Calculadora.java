@@ -22,8 +22,8 @@ public class Calculadora {
             }
         } else {
             while (!((operacion.equals("0")) && operacion.equals("1"))) {
-                JOptionPane.showMessageDialog(null,
-                        "valores no binarios" +ENTER + "intenta de nuevo");
+                JOptionPane.showMessageDialog(null, "valores no binarios" +ENTER
+                        + "intenta de nuevo");
                 Operacion();
             }
         }
