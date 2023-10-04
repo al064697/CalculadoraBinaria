@@ -1,4 +1,7 @@
 public class Main {
-    static Calculadora calculadora = new Calculadora();
-    public static void main(String[] args) {calculadora.EncenderCalculadora(true);}
+
+    public static void main(String[] args) {
+        Calculadora calculadora = new Calculadora();
+        calculadora.EncenderCalculadora(true);
+    }
 }
