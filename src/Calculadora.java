@@ -1,13 +1,9 @@
 import javax.swing.*;
 
-
 public class Calculadora {
     public final char ENTER = '\n';
-
-
     private String operacion, resultado;
     int n1, n2;
-
     public void Operacion() {
         operacion = JOptionPane.showInputDialog(null,
                 "Calculadora de binarios" + ENTER + "Ingresa una operación binaria "
@@ -30,7 +26,6 @@ public class Calculadora {
             }
         }
     }
-
     public void RestaBinaria() {
         n1 = Integer.parseInt(operacion.substring(0, operacion.indexOf('-')).trim(), 2);
         n2 = Integer.parseInt(operacion.substring(operacion.indexOf('-') + 1).trim(), 2);
@@ -38,7 +33,6 @@ public class Calculadora {
         JOptionPane.showMessageDialog(null,
                 "El resultado de la resta binaria es " + resultado + " base 2");
     }
-
     public void MultiplicacionBinaria() {
         n1 = Integer.parseInt(operacion.substring(0, operacion.indexOf('x')).trim(), 2);
         n2 = Integer.parseInt(operacion.substring(operacion.indexOf('x') + 1).trim(), 2);
@@ -46,7 +40,6 @@ public class Calculadora {
         JOptionPane.showMessageDialog(null,
                 "El resultado de la multiplicacion binaria es " + resultado + " base 2");
     }
-
     public void SumaBinarios() {
         n1 = Integer.parseInt(operacion.substring(0, operacion.indexOf('+')).trim(), 2);
         n2 = Integer.parseInt(operacion.substring(operacion.indexOf('+') + 1).trim(), 2);
@@ -54,7 +47,6 @@ public class Calculadora {
         JOptionPane.showMessageDialog(null, "El resultado de la suma binaria es "
                 + resultado + " base 2");
     }
-
     public void ApagarCalculadora(int opcion) {
         switch(opcion) {
             case 1:
@@ -69,7 +61,6 @@ public class Calculadora {
                 System.exit(0);
         }
     }
-
     public void Opciones() {
         int opcion = 0;
         try {
@@ -105,7 +96,6 @@ public class Calculadora {
         JOptionPane.showMessageDialog(null, "SYSTEM ERROR. " + ENTER +"Try latter");
         System.exit(0);
     }
-
     public void EncenderCalculadora(boolean estado) {
         if(estado) {
             JOptionPane.showMessageDialog(null, "Calculadora encendida");
@@ -114,7 +104,6 @@ public class Calculadora {
             System.out.println(" ");
         }
     }
-
     public static void main(String[] args) {
         Main.main(args);
     }
