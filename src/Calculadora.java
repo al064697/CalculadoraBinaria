@@ -1,5 +1,4 @@
 import javax.swing.*;
-
 public class Calculadora {
     public final char ENTER = '\n';
     private String operacion, resultado;
