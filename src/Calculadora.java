@@ -1,23 +1,16 @@
 import javax.swing.*;
 
 public class Calculadora {
-    public final char ENTER = '\n';
-    private String operacion, resultado;
+    final char ENTER = '\n';
+    String operacion, resultado;
     int n1, n2;
     public void Operacion() {
         operacion = JOptionPane.showInputDialog(null,
-                "Calculadora de binarios" + ENTER + "Ingresa una operación binaria "
-                        + "(suma, resta o multiplicación)");
+                "Calculadora de binarios" + ENTER + "Ingresa una operación binaria " + "(suma, resta o multiplicación)");
         if((operacion.contains("0") && operacion.contains("1"))) {
-            if (operacion.contains("+")) {
-                SumaBinarios();
-            }
-            else if(operacion.contains("x")) {
-                MultiplicacionBinaria();
-            }
-            else if(operacion.contains("-")) {
-                RestaBinaria();
-            }
+            if (operacion.contains("+")) { SumaBinarios(); }
+            else if(operacion.contains("x")) { MultiplicacionBinaria(); }
+            else if(operacion.contains("-")) { RestaBinaria(); }
         } else {
             while ((!(operacion.equals("0")) && (!(operacion.equals("1"))))) {
                 JOptionPane.showMessageDialog(null, "ERROR: valores no binarios"
@@ -52,13 +45,10 @@ public class Calculadora {
             case 1:
                 JOptionPane.showMessageDialog(null, "Apagando calculadora...");
                 System.exit(0); break;
-            case 0:
-                Opciones();
-                break;
+            case 0: Opciones(); break;
             default:
                 JOptionPane.showMessageDialog(null, "SYSTEM ERROR. " + ENTER + ENTER
-                        + "Try latter");
-                System.exit(0);
+                        + "Try latter"); System.exit(0);
         }
     }
     public void Opciones() {
@@ -69,15 +59,13 @@ public class Calculadora {
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Error: valores no aceptados." + ENTER
                     + "Intenta desde el principio");
-            Opciones();
-            System.exit(0);
+            Opciones(); System.exit(0);
         }
         do {
             switch(opcion) {
                 case 1:
                     JOptionPane.showMessageDialog(null, "Iniciando calculadora...");
-                    Operacion();
-                    break;
+                    Operacion(); break;
                 case 0:
                     try {
                         opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
@@ -86,25 +74,17 @@ public class Calculadora {
                     } catch (NumberFormatException e) {
                         JOptionPane.showMessageDialog(null,
                                 "Error: valores no aceptados." + ENTER + "Intenta desde el principio");
-                        Opciones();
-                        System.exit(0);
+                        Opciones(); System.exit(0);
                     }
-                    ApagarCalculadora(opcion);
-                    break;
+                    ApagarCalculadora(opcion); break;
             }
         } while ((opcion == 1) | (opcion == 0));
         JOptionPane.showMessageDialog(null, "SYSTEM ERROR. " + ENTER +"Try latter");
         System.exit(0);
     }
     public void EncenderCalculadora(boolean estado) {
-        if(estado) {
-            JOptionPane.showMessageDialog(null, "Calculadora encendida");
-            Opciones();
-        } else {
-            System.out.println(" ");
-        }
+        if(estado) { JOptionPane.showMessageDialog(null, "Calculadora encendida"); Opciones(); }
+        else { System.out.println(" "); }
     }
-    public static void main(String[] args) {
-        Main.main(args);
-    }
+    public static void main(String[] args) { Main.main(args); }
 }
