@@ -1,6 +1,7 @@
 import javax.swing.*;
 
 public class Calculadora {
+
     final char ENTER = '\n';
     String operacion, resultado;
     int n1, n2;
